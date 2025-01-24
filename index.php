@@ -8,14 +8,14 @@
         body {
             margin: 0;
             font-family: 'Georgia', serif;
-            background: linear-gradient(to bottom, #f8f0e3, #fceae1);
-            color: #5a3932;
+            background: linear-gradient(to bottom, #e7f0e4, #d6e4d3);
+            color: #4d5a4b;
             overflow-x: hidden;
         }
         header {
             text-align: center;
             padding: 50px 20px;
-            background: #f3d1b3;
+            background: #aab7a2;
             color: #ffffff;
         }
         header h1 {
@@ -23,6 +23,7 @@
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
+            word-wrap: break-word;
         }
         header p {
             font-size: 1.2em;
@@ -36,7 +37,7 @@
         }
         .block {
             margin-bottom: 30px;
-            border: 2px solid #f3d1b3;
+            border: 2px solid #aab7a2;
             border-radius: 10px;
             background: #ffffff;
             padding: 20px;
@@ -50,7 +51,7 @@
         h2 {
             font-size: 1.8em;
             margin-bottom: 10px;
-            color: #5a3932;
+            color: #4d5a4b;
         }
         .block img {
             width: 100%;
@@ -60,7 +61,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #5a3932;
+            background: #4d5a4b;
             color: #ffffff;
         }
         footer p {
@@ -74,7 +75,7 @@
             border-radius: 10px;
         }
         a {
-            color: #d87a56;
+            color: #6b8f6d;
             text-decoration: none;
         }
 
@@ -99,7 +100,8 @@
                 padding: 30px 15px;
             }
             header h1 {
-                font-size: 2em;
+                font-size: 1.8em;
+                line-height: 1.2;
             }
             header p {
                 font-size: 1em;
@@ -120,7 +122,8 @@
 
         @media (max-width: 400px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 1.5em;
+                line-height: 1.2;
             }
             header p {
                 font-size: 0.9em;
@@ -140,24 +143,24 @@
 <body>
     <header>
         <h1>Добро пожаловать на нашу свадьбу</h1>
-        <p>Мы с нетеadadadпением ждем возможности отпраздновать этот особенный день вместе с вами!</p>
+        <p>Мы с нетерпением ждем возможности отпраздновать этот особенный день вместе с вами!</p>
     </header>
 
     <section>
         <div class="block">
             <h2>Дата и время</h2>
-            <p>Ждем вас <strong>15 июня 2025 года</strong>, в <strong>16:00</strong>.</p>
+            <p>Ждем вас <strong>5 июля 2025 года</strong>, в <strong>16:00</strong>.</p>
         </div>
 
         <div class="block">
             <h2>Место проведения</h2>
-            <p>Свадьба пройдет в прекрасном <strong>Rosewood Garden Hall</strong>, расположенном в центре города.</p>
-            <img src="https://source.unsplash.com/900x300/?wedding,venue" alt="Место проведения">
+            <p>Свадьба пройдет на прекрасной <strong>Оранжевой ферме</strong>, расположенной за городом.</p>
+            <img src="" alt="Место проведения">
         </div>
 
         <div class="block">
             <h2>Дресс-код</h2>
-            <p>Мы будем рады видеть вас в нарядной одежде. Пожалуйста, выбирайте пастельные оттенки!</p>
+            <p>Мы будем рады видеть вас в нарядной одежде. Пожалуйста, выбирайте оливковые оттенки!</p>
         </div>
 
         <div class="block">
@@ -181,7 +184,7 @@
         <div class="block map">
             <h2>Как добраться</h2>
             <p>Найдите путь с помощью карты ниже:</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345077327!2d144.96315791531673!3d-37.814217979751704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5771e2075bbcd6!2sWedding%20Venue!5e0!3m2!1sru!2s!4v1614903213951!5m2!1sru!2s" allowfullscreen=""></iframe>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A00fb175b1081ff0d289049386ec0cc478ec210b61503f05db9e0c277ab957662&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 
         <div class="block">
@@ -197,7 +200,7 @@
     </section>
 
     <footer>
-        <p>Мы с нетерпением ждем встречи с вами в этот особенный день! С любовью, [Ваши Имена]</p>
+        <p>Мы с нетерпением ждем встречи с вами в этот особенный день!</p>
     </footer>
 </body>
 </html>
