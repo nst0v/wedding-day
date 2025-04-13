@@ -1,145 +1,212 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приглашение на свадьбу</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background: linear-gradient(to bottom, #f8f0e3, #fceae1);
-            color: #5a3932;
-            overflow-x: hidden;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: #f3d1b3;
-            color: #ffffff;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
-        section {
-            padding: 50px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        .block {
-            margin-bottom: 30px;
-            border: 2px solid #f3d1b3;
-            border-radius: 10px;
-            background: #ffffff;
-            padding: 20px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .block:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            color: #5a3932;
-        }
-        .block img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #5a3932;
-            color: #ffffff;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-        }
-        .map iframe {
-            width: 100%;
-            height: 300px;
-            border: 0;
-            border-radius: 10px;
-        }
-        a {
-            color: #d87a56;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css?version=1">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <title>Анна & Михаил | Наша свадьба</title>
+  <link rel="stylesheet" href="scss/style.scss">
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать на нашу свадьбу</h1>
-        <p>Мы с нетерпением ждем возможности отпраздновать этот особенный день вместе с вами!</p>
-    </header>
+<section id="main">
+  <div class="photo-album">
+    <img src="img/love.gif" alt="love" class="love-gif"/>
+    <div class="photo-with-text">
+      <span>Жених</span>
+      <img src="img/zhenih.jpg" alt="zhenih"/>
+    </div>
 
-    <section>
-        <div class="block">
-            <h2>Дата и время</h2>
-            <p>Ждем вас <strong>15 июня 2025 года</strong>, в <strong>16:00</strong>.</p>
-        </div>
+    <img src="img/love-heart.gif" alt="love" class="love-heart-gif"/>
+    <div class="photo-with-text">
+      <img src="img/nevesta.jpg" alt="nevesta"/>
+      <span>Невеста</span>
+    </div>
+  </div>
+  <h2>Паша + Света</h2>
+</section>
 
-        <div class="block">
-            <h2>Место проведения</h2>
-            <p>Свадьба пройдет в прекрасном <strong>Rosewood Garden Hall</strong>, расположенном в центре города.</p>
-            <img src="https://source.unsplash.com/900x300/?wedding,venue" alt="Место проведения">
-        </div>
+<section id="calendar">
+  <div class="calendar-header base-text text-center">Приглашаем Вас на наше великое <br> событие — свадьбу! <br>
+    Этот день будет являться самым <br> значимым и запоминающимся <br> в нашей жизни!
+  </div>
+  <p class="text-center mt-4">Июль 2025 года</p>
+  <div class="calendar-container">
+    <div class="day-empty"></div>
+    <div class="day">1</div>
+    <div class="day">2</div>
+    <div class="day">3</div>
+    <div class="day">4</div>
+    <div class="day wedding-day">
+      <span>5</span>
+      <img src="img/star.png" class="star-png" alt="star">
+    </div>
+    <div class="day">6</div>
+    <div class="day">7</div>
+    <div class="day">8</div>
+    <div class="day">9</div>
+    <div class="day">10</div>
+    <div class="day">11</div>
+    <div class="day">12</div>
+    <div class="day">13</div>
+    <div class="day">14</div>
+    <div class="day">15</div>
+    <div class="day">16</div>
+    <div class="day">17</div>
+    <div class="day">18</div>
+    <div class="day">19</div>
+    <div class="day">20</div>
+    <div class="day">21</div>
+    <div class="day">22</div>
+    <div class="day">23</div>
+    <div class="day">24</div>
+    <div class="day">25</div>
+    <div class="day">26</div>
+    <div class="day">27</div>
+    <div class="day">28</div>
+    <div class="day">29</div>
+    <div class="day">30</div>
+    <div class="day">31</div>
+  </div>
+  <a
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250705T150000/20250705T230000&text=Свадьба%20Анны%20и%20Михаила&details=Торжественная%20церемония%20и%20банкет.%20Дресс-код:%20вечерние%20наряды.&location=Ресторан%20'La%20Vita'%2C%20ул.%20Романтиков%2C%2014"
+      class="base-btn base-text calendar-btn"
+      target="_blank"
+  >
+    Добавить в календарь
+  </a>
+</section>
 
-        <div class="block">
-            <h2>Дресс-код</h2>
-            <p>Мы будем рады видеть вас в нарядной одежде. Пожалуйста, выбирайте пастельные оттенки!</p>
-        </div>
+<section id="album">
+  <div class="album-container">
+    <img src="img/sovmestka1.jpg" alt="sovmestka1"/>
+    <div class="right-part">
+      <img src="img/sovmestka2.png" alt="sovmestka2"/>
+      <p class="base-text">В этом мире ты всего <br> лишь человек, но для <br> кого-то ты — весь мир <span
+          class="fade-item">|</span></p>
+    </div>
+  </div>
+</section>
 
-        <div class="block">
-            <h2>Что взять с собой</h2>
-            <p>Вашу лучезарную улыбку, радостное настроение и танцевальную обувь!</p>
-        </div>
+<section id="place">
+  <h1 class="section-header">Место <br>проведения</h1>
+  <span class="base-text mt-3">ПАРК-ОТЕЛЬ «КОРКИНО LAKE»</span>
+  <p class="base-text">по адресу:<br> 12 км Мурманского шоссе</p>
+  <div class="rest-card base-text">
+    <img src="img/rest.jpg" alt="rest"/>
+    <a
+        href="https://yandex.ru/maps/org/grilmaniya/34712759816/?ll=40.402119%2C56.123529&mode=search&sll=40.385640%2C56.123528&source=serp_navig&text=%D0%B3%D1%80%D0%B8%D0%BB%D1%8C%D0%BC%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80&z=14"
+        class="base-btn"
+    >
+      ПОСМОТРЕТЬ НА КАРТЕ
+    </a>
+  </div>
+</section>
 
-        <div class="block">
-            <h2>Меню</h2>
-            <p>Наслаждайтесь изысканными блюдами, включая:
-                <ul>
-                    <li>Лосось на гриле с лимонным соусом</li>
-                    <li>Курица, запеченная с травами</li>
-                    <li>Вегетарианская паста</li>
-                    <li>Восхитительные десерты</li>
-                </ul>
-            </p>
-            <img src="https://source.unsplash.com/900x300/?wedding,food" alt="Еда">
-        </div>
+<section id="plan">
+  <h1 class="section-header">План дня</h1>
+  <div class="plan-container base-text">
+    <div class="plan-item">
+      <h6>Сбор гостей</h6>
+      <h6>15:00</h6>
+      <p>встречаемся, настраиваемся на веселую свадьбу, главное не опаздывать.</p>
+    </div>
+    <div class="plan-item">
+      <h6>Церемония</h6>
+      <h6>15:30</h6>
+      <p>немного радостных трогательных формальностей - то, ради чего собирались.</p>
+    </div>
+    <div class="plan-item">
+      <h6>Банкет</h6>
+      <h6>17:00</h6>
+      <p>самое время для вкусной еды, развлечений и поздравлений.</p>
+    </div>
+    <div class="plan-item">
+      <h6>Завершение вечера</h6>
+      <h6>23:00</h6>
+      <p>к сожалению, даже такой приятный вечер заканчивается.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="block map">
-            <h2>Как добраться</h2>
-            <p>Найдите путь с помощью карты ниже:</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345077327!2d144.96315791531673!3d-37.814217979751704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5771e2075bbcd6!2sWedding%20Venue!5e0!3m2!1sru!2s!4v1614903213951!5m2!1sru!2s" allowfullscreen=""></iframe>
-        </div>
+<section id="dress">
+  <h1 class="section-header">Дресс-код</h1>
+  <p class="base-text text-center"> Мы очень старались сделать <br> праздник красивым и будем <br> рады, если в своих нарядах <br> Вы поддержите цветовую гамму нашей свадьбы!</p>
+</section>
 
-        <div class="block">
-            <h2>Фотозона</h2>
-            <p>Не пропустите веселую фотозону для запечатления незабываемых моментов. Реквизит предоставляется!</p>
-            <img src="https://source.unsplash.com/900x300/?photo,booth" alt="Фотозона">
-        </div>
+<!--<section id="contact">-->
+<!--  <form id="application-form" class="needs-validation" novalidate="">-->
+<!--    <div class="form-container">-->
+<!--      <p class="text-header">Связаться</p>-->
+<!--      <div class="form-field">-->
+<!--        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" value="" required="">-->
+<!--        <div class="invalid-feedback">-->
+<!--          Это обязательное поле.-->
+<!--        </div>-->
+<!--      </div>-->
 
-        <div class="block">
-            <h2>Подтверждение участия</h2>
-            <p>Пожалуйста, сообщите нам о своем участии, заполнив форму <a href="#">здесь</a>.</p>
-        </div>
-    </section>
+<!--      <div class="form-field">-->
+<!--        <input type="text" class="form-control" id="phoneNumber" placeholder="Введите ваш телефон" value="" required="">-->
+<!--        <div class="invalid-feedback">-->
+<!--          Это обязательное поле.-->
+<!--        </div>-->
+<!--      </div>-->
 
-    <footer>
-        <p>Мы с нетерпением ждем встречи с вами в этот особенный день! С любовью, [Ваши Имена]</p>
-    </footer>
+<!--      <div class="form-field">-->
+<!--        <textarea type="text" class="form-control" id="message" placeholder="Введите ваше сообщение"-->
+<!--                  required=""></textarea>-->
+<!--        <div class="invalid-feedback">-->
+<!--          Это обязательное поле.-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <button class="btn btn-danger" type="submit">Отправить cообщение</button>-->
+<!--      <p class="sub-text">-->
+<!--        ⚠ Нажимая на кнопку вы выражаете согласие с политикой конфиденциальности и правилами обработки персональных-->
+<!--        данных-->
+<!--      </p>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</section>-->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js?version=1"></script>
+<script>
+  // !!! Переменные данные о боте и чате будут раскрыты при реверс инженеринге, ДЕМО ВАРИАНТ !!!
+  document.getElementById("application-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phoneNumber = document.getElementById("phoneNumber").value;
+    let message = document.getElementById("message").value.slice(0, 150);
+
+    let telegramBotToken = "";  // Заменить на токен бота
+    let chatId = "";  // ID чата, куда отправлять сообщения
+
+    let text = `🔔 Новое сообщение!\n\n👤 Имя: ${name} \n📞 Телефон: ${phoneNumber}\n📝 Сообщение: ${message}`;
+
+    fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({chat_id: chatId, text: text})
+    }).then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          alert("Заявка отправлена!");
+          document.getElementById("application-form").reset();
+          let modal = bootstrap.Modal.getInstance(document.getElementById("applicationModal"));
+          modal.hide();
+        } else {
+          alert("Ошибка отправки!");
+        }
+      }).catch(error => alert("Ошибка сети!"));
+  });
+</script>
 </body>
 </html>

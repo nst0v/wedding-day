@@ -1,0 +1,374 @@
+@font-face {
+  font-family: Great Vibe;
+  src: url("../fonts/GreatVibes-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+html, body {
+  font-family: "Great Vibe", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  overflow-x: hidden;
+  background-color: #f5f3eb;
+}
+
+.base-text {
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding: 24px;
+  margin: 24px;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  gap: 48px;
+}
+#main h2, #main span {
+  font-size: 48px;
+}
+#main .photo-album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 32px;
+}
+#main .photo-album img {
+  max-height: 300px;
+}
+#main .photo-album .love-gif, #main .photo-album .love-heart-gif {
+  position: absolute;
+  max-width: 150px;
+}
+#main .photo-album .love-gif:first-of-type, #main .photo-album .love-heart-gif:first-of-type {
+  top: 25px;
+  left: 0;
+  -webkit-transform: rotate(335deg);
+      -ms-transform: rotate(335deg);
+          transform: rotate(335deg);
+}
+#main .photo-album .love-gif:last-of-type, #main .photo-album .love-heart-gif:last-of-type {
+  right: -10px;
+  top: 45%;
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+#main .photo-album .photo-with-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#main .photo-album .photo-with-text:first-of-type {
+  -webkit-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+#main .photo-album .photo-with-text:first-of-type span {
+  -webkit-writing-mode: sideways-lr;
+      -ms-writing-mode: sideways-lr;
+          writing-mode: sideways-lr;
+}
+#main .photo-album .photo-with-text:last-of-type {
+  -webkit-transform: rotate(357deg);
+      -ms-transform: rotate(357deg);
+          transform: rotate(357deg);
+}
+#main .photo-album .photo-with-text:last-of-type span {
+  -webkit-writing-mode: sideways-rl;
+      -ms-writing-mode: sideways-rl;
+          writing-mode: sideways-rl;
+}
+
+#calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-transform: translate(calc(-50% - 24px), -50%) scale(1);
+            transform: translate(calc(-50% - 24px), -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(calc(-50% - 24px), -50%) scale(1.1);
+            transform: translate(calc(-50% - 24px), -50%) scale(1.1);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    -webkit-transform: translate(calc(-50% - 24px), -50%) scale(1);
+            transform: translate(calc(-50% - 24px), -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(calc(-50% - 24px), -50%) scale(1.1);
+            transform: translate(calc(-50% - 24px), -50%) scale(1.1);
+  }
+}
+#calendar p {
+  font-size: 32px;
+}
+#calendar .calendar-header {
+  padding: 24px;
+  text-wrap: nowrap;
+}
+#calendar .calendar-container, #calendar .calendar-btn {
+  width: 400px;
+  border-radius: 10px;
+}
+#calendar .calendar-container {
+  width: 400px;
+  background: white;
+  padding: 20px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+#calendar span {
+  position: relative;
+  z-index: 2;
+}
+#calendar .wedding-day {
+  position: relative;
+  color: #6c584c;
+}
+#calendar .wedding-day .star-png {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 50px;
+  -webkit-transform: translate(calc(-50% - 24px), -50%);
+      -ms-transform: translate(calc(-50% - 24px), -50%);
+          transform: translate(calc(-50% - 24px), -50%);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+#album {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: 48px;
+}
+#album p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+#album .album-container {
+  max-width: 450px;
+}
+@-webkit-keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+#album img {
+  max-height: 300px;
+  margin: 0 auto 0 20px;
+  -webkit-transform: rotate(356deg);
+      -ms-transform: rotate(356deg);
+          transform: rotate(356deg);
+}
+#album .right-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+#album .right-part img {
+  -webkit-transform: rotate(17deg);
+      -ms-transform: rotate(17deg);
+          transform: rotate(17deg);
+  max-height: 150px;
+  margin: -80px -30px 0 0;
+}
+#album .fade-item {
+  -webkit-animation: fade 1s infinite;
+          animation: fade 1s infinite;
+  color: #7f2b2b;
+}
+
+.base-btn {
+  display: block;
+  width: 100%;
+  background-color: #763b1e;
+  padding: 24px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-size: 48px;
+  letter-spacing: 8px;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+#place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+#place .rest-card {
+  display: inline-block;
+}
+#place .rest-card img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#place .rest-card a.visit-cart {
+  display: block;
+  width: 100%;
+  background-color: #763b1e;
+  padding: 24px;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#plan .plan-container {
+  position: relative;
+  padding-left: 60px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#plan .plan-container::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  bottom: 25px;
+  width: 2px;
+  background: #d4a373;
+  z-index: 1;
+}
+#plan .plan-container .plan-item {
+  position: relative;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+#plan .plan-container .plan-item p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(33, 37, 41, 0.73);
+}
+#plan .plan-container .plan-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: url("../img/love-list.png") no-repeat center center;
+  background-size: contain;
+  z-index: 2;
+}
+#plan .plan-container .plan-item:last-child {
+  margin-bottom: 0;
+}
