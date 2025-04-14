@@ -204,7 +204,7 @@ section {
 #calendar .wedding-day .love-gif {
   position: absolute;
   top: 20%;
-  left: 62%;
+  left: 65%;
   width: 60px;
   height: 50px;
   -webkit-transform: translate(calc(-50% - 22px), -50%);
@@ -577,4 +577,15 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
+}
+
+#application .form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#application .form-field input,
+#application .form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
 }

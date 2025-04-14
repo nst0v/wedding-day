@@ -178,14 +178,19 @@
       </div>
 
       <div class="form-field">
-        <label for="name">Введите ваш телефон</label>
-        <input type="text" class="form-control" id="phoneNumber" placeholder="Номер" value="" required="">
+        <label for="phoneNumber">Введите ваш телефон</label>
+        <input type="tel" class="form-control" id="phoneNumber" placeholder="+7 (___) ___-__-__" value="" required="" pattern="^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$">
         <div class="invalid-feedback">
-          Это обязательное поле.
+          Пожалуйста, введите корректный номер телефона.
         </div>
       </div>
 
-      <button class="base-btn" type="submit">Ответить</button>
+      <div class="form-field">
+        <label for="question">Остался вопрос?</label>
+        <textarea class="form-control" id="question" placeholder="Его можно задать тут" rows="3"></textarea>
+      </div>
+
+      <button class="base-btn" type="submit">Отправить</button>
     </div>
   </form>
 </section>
@@ -223,17 +228,60 @@
     });
 </script>
 <script>
+  document.getElementById("phoneNumber").addEventListener("input", function(e) {
+    let value = e.target.value.replace(/\D/g, "");
+    if (value.length > 0) {
+      if (value[0] === "8") {
+        value = "7" + value.substring(1);
+      }
+      if (value[0] !== "7") {
+        value = "7" + value;
+      }
+    }
+    
+    let formattedValue = "";
+    if (value.length > 0) {
+      formattedValue = "+" + value[0];
+    }
+    if (value.length > 1) {
+      formattedValue += " (" + value.substring(1, 4);
+    }
+    if (value.length > 4) {
+      formattedValue += ") " + value.substring(4, 7);
+    }
+    if (value.length > 7) {
+      formattedValue += "-" + value.substring(7, 9);
+    }
+    if (value.length > 9) {
+      formattedValue += "-" + value.substring(9, 11);
+    }
+    
+    e.target.value = formattedValue;
+  });
+  
   // !!! Переменные данные о боте и чате будут раскрыты при реверс инженеринге, ДЕМО ВАРИАНТ !!!
   document.getElementById("application-form").addEventListener("submit", function (event) {
     event.preventDefault();
+    
+    const form = event.target;
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add('was-validated');
+      return;
+    }
 
     let name = document.getElementById("name").value;
     let phoneNumber = document.getElementById("phoneNumber").value;
+    let question = document.getElementById("question").value;
 
-    let telegramBotToken = "";  // Заменить на токен бота
-    let chatId = "";  // ID чата, куда отправлять сообщения
+    let telegramBotToken = "7244155453:AAEdnet6p9Vc43TZoUEVtLVcMuANQHSmpvw";
+    let chatId = "-1002620126145";
 
-    let text = `🔔 Новая анкета!\n\n👤 Имя: ${name} \n📞 Телефон: ${phoneNumber}`;
+    let text = `🔔 Новое подтверждение!\n\n👤 Имя: ${name} \n📞 Телефон: ${phoneNumber}`;
+    
+    if (question.trim() !== "") {
+      text += `\n❓ Коментарий: ${question}`;
+    }
 
     fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
       method: "POST",
@@ -244,12 +292,15 @@
         if (data.ok) {
           alert("Заявка отправлена!");
           document.getElementById("application-form").reset();
-          let modal = bootstrap.Modal.getInstance(document.getElementById("applicationModal"));
-          modal.hide();
+          form.classList.remove('was-validated');
+          if (document.getElementById("applicationModal")) {
+            let modal = bootstrap.Modal.getInstance(document.getElementById("applicationModal"));
+            if (modal) modal.hide();
+          }
         } else {
-          alert("Ошибка отправки!");
+          alert("Ошибка отправки: " + data.description);
         }
-      }).catch(error => alert("Ошибка сети!"));
+      }).catch(error => alert("Ошибка сети: " + error.message));
   });
 </script>
 </body>
