@@ -11,13 +11,21 @@ html, body {
   font-weight: 400;
   font-size: 20px;
   overflow-x: hidden;
-  background-color: #f5f3eb;
+  background-color: #f0e6d8;
 }
 
 body {
   position: relative;
 }
+.color-blob {
+  border-radius: 50%; /* Makes it circular as a base */
+  filter: url(#blob-filter); /* Apply SVG filter for blob effect */
+  transition: transform 0.3s ease;
+}
 
+.color-blob:hover {
+  transform: scale(1.1);
+}
 .base-text {
   font-family: "Montserrat", sans-serif;
   color: rgba(33, 37, 41, 0.7);
@@ -117,7 +125,15 @@ section {
       -ms-writing-mode: sideways-rl;
           writing-mode: sideways-rl;
 }
+.phone-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
+.phone-link:hover {
+  color: #4CAF50;
+}
 #calendar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,10 +201,10 @@ section {
   position: relative;
   color: #6c584c;
 }
-#calendar .wedding-day .star-png {
+#calendar .wedding-day .love-gif {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 60%;
   width: 60px;
   height: 50px;
   -webkit-transform: translate(calc(-50% - 22px), -50%);
