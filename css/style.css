@@ -11,7 +11,7 @@ html, body {
   font-weight: 400;
   font-size: 20px;
   overflow-x: hidden;
-
+  background-color: #75470d;
 }
 
 body {
@@ -78,9 +78,7 @@ body::before {
   height: auto;
   z-index: -1;
   object-fit: cover;
-  opacity: 0.25; /* Прозрачность видео для сохранения цветовой гаммы */
-  transform: scale(1.3); /* Увеличиваем масштаб видео, чтобы оно казалось "отдаленным" */
-  transform-origin: center center; /* Центрируем масштабирование */
+  opacity: 0.15; /* Прозрачность видео для сохранения цветовой гаммы */
 }
 
 /* Убедимся, что все элементы отображаются поверх видео */
