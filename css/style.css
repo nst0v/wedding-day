@@ -675,17 +675,17 @@ section {
 
 .photo-album {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 100%;
 }
 
 .photo-with-text {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 /* Стили для десктопа */
@@ -696,7 +696,6 @@ section {
   
   .photo-with-text:first-of-type {
     flex-direction: row;
-    text-align: right;
   }
   
   .photo-with-text:first-of-type span {
@@ -705,7 +704,6 @@ section {
   
   .photo-with-text:last-of-type {
     flex-direction: row-reverse;
-    text-align: left;
   }
   
   .photo-with-text:last-of-type span {
@@ -717,27 +715,29 @@ section {
 @media screen and (max-width: 767px) {
   .photo-album {
     flex-direction: column;
+    gap: 15px;
   }
   
+  /* Сохраняем горизонтальное расположение для каждой пары фото+текст */
   .photo-with-text {
-    flex-direction: column;
-    margin-bottom: 15px;
+    width: 100%;
+    justify-content: center;
   }
   
+  /* Уменьшаем размер шрифта на мобильных */
   .photo-with-text span {
-    margin: 5px 0;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    padding: 0 8px;
   }
   
-  .love-gif, .love-heart-gif {
-    max-width: 50px;
-    margin: 10px 0;
-  }
-  
+  /* Уменьшаем размер фото на мобильных */
   .photo-with-text img {
-    max-width: 150px;
-    height: auto;
+    max-width: 100px;
+  }
+  
+  /* Уменьшаем размер декоративных gif */
+  .love-gif, .love-heart-gif {
+    max-width: 40px;
   }
 }
 
@@ -782,4 +782,18 @@ h2 .plus {
   h2 .plus {
     margin: 0 5px; /* Минимальные отступы */
   }
+
+  @media screen and (max-width: 320px) {
+    .photo-with-text span {
+      font-size: 0.9rem;
+      padding: 0 5px;
+    }
+    
+    .photo-with-text img {
+      max-width: 80px;
+    }
+    
+    .love-gif, .love-heart-gif {
+      max-width: 30px;
+    }
 }
