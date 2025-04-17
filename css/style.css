@@ -282,10 +282,8 @@ section {
 }
 #album .album-container {
   max-width: 450px;
-  margin-right: auto;
-  margin-left: 0;      /* Нулевой отступ слева */
-  padding-left: 10px;  /* Небольшой отступ слева для визуального баланса */
-  transform: translateX(-15px); /* Сдвигаем контейнер влево на 15px */
+  margin: 0 auto; /* Центрирование контейнера */
+  transform: none; /* Убираем предыдущий transform, который смещал контейнер влево */
 }
 @-webkit-keyframes fade {
   0%, 100% {
