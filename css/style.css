@@ -11,7 +11,7 @@ html, body {
   font-weight: 400;
   font-size: 20px;
   overflow-x: hidden;
-  background-color: #75470d;
+  background-color: #bb9465;
 }
 
 body {
@@ -104,7 +104,7 @@ section {
   gap: 60px;
 }
 #main h2, #main span {
-  font-size: 64px;
+  font-size: 50px;
 }
 #main .photo-album {
   display: -webkit-box;
@@ -639,7 +639,39 @@ section {
   box-sizing: border-box;
 }
 
-/* Добавьте этот код в ваш файл style.css */
+/* Базовые стили для контейнеров цветовой гаммы */
+.dress-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Стиль для второго контейнера (с коричневыми оттенками) */
+.dress-container:nth-of-type(2) {
+  margin-top: 15px; /* Добавляем отступ сверху для второго ряда */
+}
+
+/* Стили для цветовых блоков */
+.color-blob {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 767px) {
+  .dress-container:nth-of-type(2) {
+    margin-top: 10px; /* Немного меньший отступ на мобильных */
+  }
+  
+  .color-blob {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 .photo-album {
   display: flex;
@@ -706,5 +738,48 @@ section {
   .photo-with-text img {
     max-width: 150px;
     height: auto;
+  }
+}
+
+/* Стили для заголовка с именами */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  white-space: nowrap; /* Предотвращает перенос текста */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+h2 .bride, 
+h2 .groom, 
+h2 .plus {
+  display: inline-block;
+}
+
+h2 .plus {
+  margin: 0 10px; /* Добавляем отступы вокруг знака "+" */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.5rem; /* Уменьшаем размер шрифта на мобильных */
+  }
+  
+  h2 .plus {
+    margin: 0 8px; /* Немного уменьшаем отступы на мобильных */
+  }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 320px) {
+  h2 {
+    font-size: 1.2rem; /* Еще меньше шрифт для самых маленьких экранов */
+  }
+  
+  h2 .plus {
+    margin: 0 5px; /* Минимальные отступы */
   }
 }
