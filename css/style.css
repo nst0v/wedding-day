@@ -289,6 +289,10 @@ section {
 }
 #album .album-container {
   max-width: 450px;
+  margin-right: auto;
+  margin-left: 0;      /* Нулевой отступ слева */
+  padding-left: 10px;  /* Небольшой отступ слева для визуального баланса */
+  transform: translateX(-15px); /* Сдвигаем контейнер влево на 15px */
 }
 @-webkit-keyframes fade {
   0%, 100% {
@@ -797,4 +801,20 @@ h2 .plus {
       max-width: 30px;
     }
 }
+}
+
+@media screen and (max-width: 767px) {
+  #album .album-container {
+    transform: translateX(-10px); /* Меньший сдвиг на мобильных */
+    padding-left: 5px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  #album .album-container {
+    transform: translateX(-5px); /* Минимальный сдвиг на маленьких экранах */
+    padding-left: 0;
+    margin: 0 auto; /* Центрирование на очень маленьких экранах */
+  }
 }
