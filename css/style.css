@@ -638,3 +638,73 @@ section {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* Добавьте этот код в ваш файл style.css */
+
+.photo-album {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.photo-with-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Стили для десктопа */
+@media screen and (min-width: 768px) {
+  .photo-album {
+    flex-wrap: nowrap;
+  }
+  
+  .photo-with-text:first-of-type {
+    flex-direction: row;
+    text-align: right;
+  }
+  
+  .photo-with-text:first-of-type span {
+    margin-right: 10px;
+  }
+  
+  .photo-with-text:last-of-type {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  
+  .photo-with-text:last-of-type span {
+    margin-left: 10px;
+  }
+}
+
+/* Стили для мобильных устройств */
+@media screen and (max-width: 767px) {
+  .photo-album {
+    flex-direction: column;
+  }
+  
+  .photo-with-text {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .photo-with-text span {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .love-gif, .love-heart-gif {
+    max-width: 50px;
+    margin: 10px 0;
+  }
+  
+  .photo-with-text img {
+    max-width: 150px;
+    height: auto;
+  }
+}
