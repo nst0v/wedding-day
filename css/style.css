@@ -318,13 +318,19 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: center; /* Изменено с end на center */
+      -ms-flex-align: center; /* Изменено с end на center */
+          align-items: center; /* Центрирование по горизонтали */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
+  width: 100%; /* Добавлено для полной ширины */
+}
+#album .right-part p.base-text {
+  text-align: center; /* Центрирование текста */
+  margin-left: -20px; /* Смещение влево */
+  max-width: 80%; /* Ограничение ширины для лучшего контроля */
 }
 #album .right-part img {
   -webkit-transform: rotate(17deg);
@@ -809,5 +815,19 @@ h2 .plus {
     transform: translateX(-5px); /* Минимальный сдвиг на маленьких экранах */
     padding-left: 0;
     margin: 0 auto; /* Центрирование на очень маленьких экранах */
+  }
+}
+@media screen and (max-width: 767px) {
+  #album .right-part p.base-text {
+    margin-left: -10px; /* Меньшее смещение на мобильных */
+    max-width: 90%; /* Больше ширины на мобильных */
+  }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  #album .right-part p.base-text {
+    margin-left: 0; /* Без смещения на очень маленьких экранах */
+    max-width: 100%; /* Полная ширина на очень маленьких экранах */
   }
 }
