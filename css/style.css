@@ -11,7 +11,7 @@ html, body {
   font-weight: 400;
   font-size: 20px;
   overflow-x: hidden;
-  background-color: #bb9465;
+  background-color: #f8f7f6;
 }
 
 body {
@@ -104,23 +104,16 @@ section {
   gap: 60px;
 }
 #main h2, #main span {
-  font-size: 50px;
+  font-size: 40px;
 }
 #main .photo-album {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 100%;
 }
 #main .photo-album img {
   max-height: 200px;
