@@ -87,11 +87,11 @@
     <div class="day">31</div>
   </div>
   <a
-      href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250705T150000/20250705T230000&text=Свадьба%20Насти%20и%20Никиты&details=Торжественная%20церемония%20и%20банкет.%20Дресс-код:%20вечерние%20наряды.&location=Оранжевая%20Ферма%20"
-      class="base-btn base-text calendar-btn"
-      target="_blank"
+    href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250705T150000/20250705T230000&text=Свадьба%20Насти%20и%20Никиты&details=Торжественная%20церемония%20и%20банкет.%20Дресс-код:%20вечерние%20наряды.&location=Оранжевая%20Ферма%20"
+    class="base-btn base-text calendar-btn"
+    target="_blank"
   >
-    Добавить в календарь
+  Добавить в календарь
   </a>
 </section>
 
@@ -359,6 +359,31 @@
       }
     }).catch(error => alert("Ошибка сети: " + error.message));
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const calendarBtn = document.getElementById('add-to-calendar-btn');
+    const eventDetails = {
+      title: 'Свадьба Насти и Никиты',
+      startDate: '20250705T150000',
+      endDate: '20250705T230000',
+      location: 'Оранжевая Ферма',
+      description: 'Торжественная церемония и банкет. Дресс-код: вечерние наряды.'
+    };
+    
+    // Определяем платформу
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    if (/android/i.test(userAgent)) {
+      // Android - используем intent
+      calendarBtn.href = `content://com.android.calendar/events?title=${encodeURIComponent(eventDetails.title)}&description=${encodeURIComponent(eventDetails.description)}&location=${encodeURIComponent(eventDetails.location)}&startTime=${eventDetails.startDate}&endTime=${eventDetails.endDate}`;
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      // iOS - используем ical формат
+      calendarBtn.href = `webcal://p30-calendars.icloud.com/published/2/xxxxxxxxxxx?title=${encodeURIComponent(eventDetails.title)}&dates=${eventDetails.startDate}/${eventDetails.endDate}&location=${encodeURIComponent(eventDetails.location)}&description=${encodeURIComponent(eventDetails.description)}`;
+    } else {
+      // Десктоп или другие устройства - используем Google Calendar
+      calendarBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${eventDetails.startDate}/${eventDetails.endDate}&text=${encodeURIComponent(eventDetails.title)}&details=${encodeURIComponent(eventDetails.description)}&location=${encodeURIComponent(eventDetails.location)}`;
+    }
+  });
 </script>
 </body>
 </html>
