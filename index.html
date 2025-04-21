@@ -33,10 +33,19 @@
     </div>
   </div>
   <h2><span class="bride">Никита</span><span class="plus">+</span><span class="groom">Настя</span></h2>
+  <div class="scroll-down" onclick="scrollToNextSection()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+    </svg>
+  </div>
+  <p class="text-know mt-8">Узнали? </p>
 </section>
 
 <section id="calendar">
-  <div class="calendar-header base-text text-center">Приглашаем Вас на наш день <br> — свадьбу! <br>
+  <div class="calendar-header base-text text-center">Как же быстро летит время! <br>
+    Мы так счастливы, <br> что нашли друг друга!
+  </div>
+  <div class="calendar-header base-text text-center">Приглашаем Вас <br> на наш день — свадьбу! <br>
     Этот день будет являться самым <br> значимым и запоминающимся <br> в нашей жизни!
   </div>
   <p class="text-center mt-4">Июль 2025 года</p>
@@ -92,7 +101,7 @@
     <div class="right-part">
       <img src="img/together-2.webp" alt="sovmestka2"/>
       <p class="base-text">В этом мире ты всего <br> лишь человек, но для <br> кого-то ты — весь мир <span
-          class="fade-item">|</span></p>
+          class="fade-item">|</span></p><img src="img/love-heart.gif" alt="love" class="love-heart-gif"/>
     </div>
   </div>
 </section>
@@ -100,7 +109,7 @@
 <section id="place">
   <h1 class="section-header">Место <br>проведения</h1>
   <span class="base-text mt-3">Оранжевая ферма</span>
-  <p class="base-text mb-0">по адресу:<br> Красная горка</p>
+  <p class="base-text mb-0">по адресу: <br>Судогодский район, <br>муниципальное образование Головинское</p>
   <div class="rest-card base-text">
     <img src="img/farm.webp" alt="rest"/>
     <a
@@ -117,8 +126,9 @@
   <div class="plan-container base-text">
     <div class="plan-item">
       <h6>Сбор гостей</h6>
-      <h6>15:30</h6>
-      <p>встречаемся, настраиваемся на веселую свадьбу, главное не опаздывать.</p>
+      <h6>16:30</h6>
+      <p>г. Владимир - остановка "Золотые ворота"(у музея хрусталя)</p>
+      <p>г. Судогда - у автовокзала</p>
     </div>
     <div class="plan-item">
       <h6>Фуршет</h6>
@@ -132,8 +142,8 @@
     </div>
     <div class="plan-item">
       <h6>Завершение вечера</h6>
-      <h6>23:00</h6>
-      <p>к сожалению, даже такой приятный вечер заканчивается.</p>
+      <h6>22:00</h6>
+      <p>официальная часть заканчивается, но для самых стойких праздник продолжается.</p>
     </div>
     <div class="plan-item"></div> <!--empty-->
   </div>
@@ -155,6 +165,7 @@
     <img src="img/gamma/brown3.png" alt="dress3" class="color-blob"/>
     <img src="img/gamma/brown4.png" alt="dress4" class="color-blob"/>
   </div>
+  <p class="base-text text-center dress-text"> Для мужчин будет уместен <br>светлый костюм с рубашкой.</p>
 </section>
 
 <section id="detail">
@@ -163,7 +174,7 @@
     <p class="base-text detail-text">Свои тёплые слова и пожелания <br> приносите в сердцах, а подарки - в
       конверте.</p>
     <p class="base-text detail-text">Приятным комплиментом для <br> нас будет, если вместо цветов <br> Вы решите
-      подарить нам бутылочку хорошего алкоголя для нашей <br> семейной коллекции.</p>
+      подарить нам <br> бутылочку хорошего алкоголя <br> для нашей семейной коллекции.</p>
     <p class="base-text detail-text">Хотите сделать незабываемый <br> сюрприз во время торжества? <br> 
       Обращайтесь к нашему ведущему: <br> <a href="tel:+79028881022" class="phone-link"><u>8-902-888-10-22</u></a> Юрий</p>
   </div>
@@ -175,8 +186,8 @@
     <div class="form-container base-text">
       <p class="text-center">Пожалуйста, подтвердите свое присутствие</p>
       <div class="form-field">
-        <label for="name">Введите ваше имя</label>
-        <input type="text" class="form-control" id="name" placeholder="Имя" value="" required="">
+        <label for="name">Как вас зовут?</label>
+        <input type="text" class="form-control" id="name" placeholder="ФИО" value="" required="">
         <div class="invalid-feedback">
           Это обязательное поле.
         </div>
@@ -189,10 +200,37 @@
           Пожалуйста, введите корректный номер телефона.
         </div>
       </div>
+      
+      <div class="form-field">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="ownCar">
+          <label class="form-check-label" for="ownCar">Доберусь на своем автомобиле</label>
+        </div>
+      </div>
 
       <div class="form-field">
+        <label>Будете ли вы присутствовать на торжестве?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="attendance" id="attendanceYes" value="yes" required>
+          <label class="form-check-label" for="attendanceYes">
+            Да, с удовольствием приду
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="attendance" id="attendanceNo" value="no" required>
+          <label class="form-check-label" for="attendanceNo">
+            К сожалению, не смогу присутствовать
+          </label>
+        </div>
+        <div class="invalid-feedback">
+          Пожалуйста, выберите один из вариантов.
+        </div>
+      </div>
+
+      
+      <div class="form-field">
         <label for="question">Остался вопрос?</label>
-        <textarea class="form-control" id="question" placeholder="Его можно задать тут" rows="3"></textarea>
+        <textarea class="form-control" id="question" placeholder="Напишите здесь" rows="2"></textarea>
       </div>
 
       <button class="base-btn" type="submit">Отправить</button>
@@ -233,6 +271,10 @@
     });
 </script>
 <script>
+    function scrollToNextSection() {
+    const nextSection = document.getElementById('calendar');
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+  }
   document.getElementById("phoneNumber").addEventListener("input", function(e) {
     let value = e.target.value.replace(/\D/g, "");
     if (value.length > 0) {
@@ -266,47 +308,57 @@
   
   // !!! Переменные данные о боте и чате будут раскрыты при реверс инженеринге, ДЕМО ВАРИАНТ !!!
   document.getElementById("application-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    if (!form.checkValidity()) {
-      event.stopPropagation();
-      form.classList.add('was-validated');
-      return;
-    }
+  event.preventDefault();
+  
+  const form = event.target;
+  if (!form.checkValidity()) {
+    event.stopPropagation();
+    form.classList.add('was-validated');
+    return;
+  }
 
-    let name = document.getElementById("name").value;
-    let phoneNumber = document.getElementById("phoneNumber").value;
-    let question = document.getElementById("question").value;
+  // Получаем значение выбранной радиокнопки
+  let attendance = document.querySelector('input[name="attendance"]:checked').value;
+  let attendanceText = attendance === "yes" ? "Да, буду присутствовать" : "Нет, не смогу присутствовать";
+  
+  let name = document.getElementById("name").value;
+  let phoneNumber = document.getElementById("phoneNumber").value;
+  let question = document.getElementById("question").value;
+  let ownCar = document.getElementById("ownCar").checked;
 
-    let telegramBotToken = "7244155453:AAEdnet6p9Vc43TZoUEVtLVcMuANQHSmpvw";
-    let chatId = "-1002620126145";
+  let telegramBotToken = "7244155453:AAEdnet6p9Vc43TZoUEVtLVcMuANQHSmpvw";
+  let chatId = "-1002620126145";
 
-    let text = `🔔 Новое подтверждение!\n\n👤 Имя: ${name} \n📞 Телефон: ${phoneNumber}`;
-    
-    if (question.trim() !== "") {
-      text += `\n❓ Коментарий: ${question}`;
-    }
+  let text = `🔔 Новое подтверждение!\n\n👤 Имя: ${name} \n📞 Телефон: ${phoneNumber}\n✅ Присутствие: ${attendanceText}`;
+  
+  // Добавляем информацию о транспорте только если гость будет присутствовать
+  if (attendance === "yes") {
+    text += `\n🚗 Транспорт: ${ownCar ? 'Прибудет на своем автомобиле' : 'Нужен трансфер'}`;
+  }
+  
+  if (question.trim() !== "") {
+    text += `\n❓ Коментарий: ${question}`;
+  }
 
-    fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({chat_id: chatId, text: text})
-    }).then(response => response.json())
-      .then(data => {
-        if (data.ok) {
-          alert("Заявка отправлена!");
-          document.getElementById("application-form").reset();
-          form.classList.remove('was-validated');
-          if (document.getElementById("applicationModal")) {
-            let modal = bootstrap.Modal.getInstance(document.getElementById("applicationModal"));
-            if (modal) modal.hide();
-          }
-        } else {
-          alert("Ошибка отправки: " + data.description);
+  fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({chat_id: chatId, text: text})
+  }).then(response => response.json())
+    .then(data => {
+      if (data.ok) {
+        alert("Заявка отправлена!");
+        document.getElementById("application-form").reset();
+        form.classList.remove('was-validated');
+        if (document.getElementById("applicationModal")) {
+          let modal = bootstrap.Modal.getInstance(document.getElementById("applicationModal"));
+          if (modal) modal.hide();
         }
-      }).catch(error => alert("Ошибка сети: " + error.message));
-  });
+      } else {
+        alert("Ошибка отправки: " + data.description);
+      }
+    }).catch(error => alert("Ошибка сети: " + error.message));
+});
 </script>
 </body>
 </html>
