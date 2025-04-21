@@ -841,7 +841,7 @@ h2 .plus {
 
 .scroll-down {
   position: absolute;
-  bottom: 43px; /* Увеличиваем значение с 30px до 50px, чтобы поднять стрелку выше */
+  bottom: 47px; /* Увеличиваем значение с 30px до 50px, чтобы поднять стрелку выше */
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
