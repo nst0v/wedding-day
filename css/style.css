@@ -116,7 +116,7 @@ section {
   max-width: 100%;
 }
 #main .photo-album img {
-  max-height: 180px; /* Уменьшаем с 200px до 180px */
+  max-height: 650px; /* Уменьшаем с 200px до 180px */
 }
 #main .photo-album .love-gif, #main .photo-album .love-heart-gif {
   position: absolute;
@@ -1066,17 +1066,17 @@ h2 .plus {
 }
 
 #main h2 {
-  margin-top: 5px; /* Минимальный отступ сверху */
+  margin-top: 10px; /* Минимальный отступ сверху */
   margin-bottom: 20px; /* Сохраняем отступ снизу */
 }
 
 /* Адаптивность для мобильных устройств */
 @media screen and (max-width: 767px) {
   #main {
-    gap: 5px; /* Еще меньший отступ для мобильных */
+    gap: 10px; /* Еще меньший отступ для мобильных */
   }
   
   #main h2 {
-    margin-top: 0; /* Убираем отступ сверху для мобильных */
+    margin-top: 10; /* Убираем отступ сверху для мобильных */
   }
 }
