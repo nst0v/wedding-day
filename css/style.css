@@ -841,12 +841,37 @@ h2 .plus {
 
 .scroll-down {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px; /* Увеличиваем значение с 30px до 50px, чтобы поднять стрелку выше */
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
   cursor: pointer;
   z-index: 10;
+}
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 767px) {
+  .scroll-down {
+    bottom: 70px; /* Еще выше для мобильных устройств */
+  }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  .scroll-down {
+    bottom: 80px; /* Максимально высоко для очень маленьких экранов */
+  }
+}
+
+/* Смещаем заголовок с именами ниже */
+#main {
+  gap: 40px; /* Было 60px, уменьшаем для компенсации */
+  padding-bottom: 100px; /* Увеличиваем отступ снизу для стрелки */
+}
+
+@media screen and (max-width: 767px) {
+  #main {
+    padding-bottom: 120px; /* Больший отступ для мобильных */
+  }
 }
 
 .scroll-down svg {
