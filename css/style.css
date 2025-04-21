@@ -112,11 +112,11 @@ section {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 20px auto;
+  margin: 0 auto; /* Убираем верхний отступ, было margin: 20px auto */
   max-width: 100%;
 }
 #main .photo-album img {
-  max-height: 250px;
+  max-height: 180px; /* Уменьшаем с 200px до 180px */
 }
 #main .photo-album .love-gif, #main .photo-album .love-heart-gif {
   position: absolute;
@@ -172,6 +172,33 @@ section {
   -webkit-writing-mode: sideways-rl;
       -ms-writing-mode: sideways-rl;
           writing-mode: sideways-rl;
+}
+
+/* Уменьшаем размер заголовка для мобильных устройств */
+@media screen and (max-width: 767px) {
+  #main {
+    padding-top: 5px; /* Еще меньший отступ сверху для мобильных */
+    gap: 15px; /* Еще меньший отступ между элементами */
+  }
+  
+  #main .photo-album img {
+    max-height: 250px; /* Еще меньше для мобильных */
+  }
+  
+  #main h2, #main span {
+    font-size: 32px; /* Уменьшаем с 40px до 32px */
+  }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  #main .photo-album img {
+    max-height: 250px; /* Максимально уменьшаем для очень маленьких экранов */
+  }
+  
+  #main h2, #main span {
+    font-size: 28px; /* Еще меньше для очень маленьких экранов */
+  }
 }
 .phone-link {
   color: inherit;
@@ -864,8 +891,14 @@ h2 .plus {
 
 /* Смещаем заголовок с именами ниже */
 #main {
-  gap: 40px; /* Было 60px, уменьшаем для компенсации */
-  padding-bottom: 100px; /* Увеличиваем отступ снизу для стрелки */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Изменяем с start на flex-start для лучшей совместимости */
+  height: 100vh;
+  gap: 20px; /* Уменьшаем отступ между элементами с 40px до 20px */
+  padding-top: 10px; /* Добавляем минимальный отступ сверху */
+  padding-bottom: 100px; /* Сохраняем отступ снизу для стрелки */
 }
 
 @media screen and (max-width: 767px) {
