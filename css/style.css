@@ -116,7 +116,7 @@ section {
   max-width: 100%;
 }
 #main .photo-album img {
-  max-height: 350px;
+  max-height: 250px;
 }
 #main .photo-album .love-gif, #main .photo-album .love-heart-gif {
   position: absolute;
